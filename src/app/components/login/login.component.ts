@@ -53,7 +53,7 @@ export class LoginComponent {
       }
       this.authServices.login(this.loginData).subscribe({
         next: (resp : LoginResponseData)=>{
-          this.router.navigate(['../users']);
+          this.router.navigate(['../home']);
           localStorage.setItem('token', "Bearer "+resp.token);
           this.toastr.success("Login successfully")
         },
