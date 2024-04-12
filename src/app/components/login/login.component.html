@@ -1,0 +1,40 @@
+<div id="content">
+  <div id="body1">
+    <h1>
+     User Log In
+    </h1>
+    <div id="form-body">
+
+      <form [formGroup]="userform" (ngSubmit)="userform.valid && login()">
+
+        <!-- <form [formGroup]="userform"> -->
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput formControlName="email" placeholder="Ex. pat@example.com">
+          @if(userform.get('email')?.hasError('required')){
+          <mat-error>Email is <strong>required</strong></mat-error>
+          }@else if (userform.get('email')?.hasError('pattern')) {
+          <mat-error>Enter a valid email</mat-error>
+          }
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput [type]="hide ? 'text' : 'password'" formControlName="password" placeholder="*********">
+          <button type="button" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+
+          @if(userform.get('password')?.hasError('required')){
+          <mat-error>Password is <strong>required</strong></mat-error>
+          }
+        </mat-form-field>
+        <button type="submit" id="btn">Log In</button>
+        <p>Don't have a account. <a routerLink="/signup">Register</a></p>
+      </form>
+    </div>
+  </div>
+
+</div>
+
+
