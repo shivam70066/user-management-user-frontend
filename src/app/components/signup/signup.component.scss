@@ -10,7 +10,7 @@
   padding: 20px 5px;
   background-color: #f0eef3;
   border-radius: 5px;
-  box-shadow: 7px 7px 20px #a799c0;
+  box-shadow: 7px 7px 20px rgb(206, 201, 214);
 }
 h1
 {
@@ -52,10 +52,10 @@ input[type="number"] {
   margin: 20px auto 5px auto;
   width: 30%;
   color: white;
-  background-color: #673ab7;
+  background-color: #3f51b5;
 }
 #btn:hover{
-  background-color: #7f5abe;
+  background-color: rgb(88, 55, 145);
 }
 
 #radioDiv{
@@ -70,8 +70,8 @@ p{
   text-align: center;
 }
 a{
-  color:#7f5abe
+  color:#3f51b5
 }
 a:hover{
-  color: #4e219b;
+  color: #1e2c7e;
 }

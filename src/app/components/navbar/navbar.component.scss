@@ -5,7 +5,7 @@
   font-size: 24px;
 }
 #left,#right{
-  padding: 20px;
+  padding: 15px;
   display: flex;
   align-items: center;
 }
@@ -13,7 +13,10 @@
   width:60%;
 }
 #left a{
-  color: rgb(216, 216, 216);
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+  margin: 2px 14px;
+  background-color: #3f51b5;
   // font-size: 18px;
 }
 #right a{
@@ -21,7 +24,7 @@
   // font-size: 18px;
 }
 .active{
-  background-color: #ffffff;
+  // background: #ffffff;
   font-weight:900;
   font-size: 18px;
   text-decoration: underline;
